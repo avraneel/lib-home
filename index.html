@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lib-Home</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -19,7 +19,18 @@
             </section>
              <section class="new">
                 <p>Came across something new?</p>
-                <button type="button" class="button">Add a New Book!</button>
+                <input type="button" value="Add a new book!" class="add">
+                <dialog class="add-modal">
+                    <form action="" method="post" class="book-form">
+                        <fieldset>
+                            <legend>Add Your Book</legend>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name">
+                            <label for="author">Author</label>
+                            <input type="text" name="author" id="author">
+                        </fieldset>
+                    </form>
+                </dialog>
             </section>
         </main>
     </div>
