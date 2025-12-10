@@ -3,13 +3,13 @@
 const myLibrary = [];
 
 const button = document.querySelector(".add");
-const addModal = document.querySelector(".add-modal");
+const addBookModal = document.querySelector(".add-book-modal");
 
 button.addEventListener("click", displayForm);
 
 function displayForm() {
   console.log("You clicked me!");
-  addModal.showModal();
+  addBookModal.showModal();
 }
 
 
