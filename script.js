@@ -42,8 +42,21 @@ function addSomeBooks() {
 
 function displayLoop() {
   addSomeBooks();
+  const shelfBooks = document.querySelector(".shelf-books");
   for (let i = 0; i < myLibrary.length; i++) {
+    let bookEntry = document.createElement("div");
+    bookEntry.classList.toggle("book-entry");
+    const bookTitle = document.createTextNode(`Title: ${myLibrary[i].title}`);
+    const bookAuthor = document.createTextNode(
+      `Author: ${myLibrary[i].author}`,
+    );
+    const bookStatus = document.createTextNode(
+      `Status: ${myLibrary[i].status}`,
+    );
+    bookEntry.appendChild(bookTitle);
+    bookEntry.appendChild(bookAuthor);
     console.log(myLibrary[i]);
+    shelfBooks.appendChild(bookEntry);
   }
 }
 

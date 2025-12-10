@@ -16,3 +16,7 @@ main {
     grid-column: 4 / 5;
     background-color: beige;
 }
+
+.book-entry {
+    color: white;
+}
