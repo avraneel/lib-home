@@ -21,16 +21,19 @@
                 <p>Came across something new?</p>
                 <input type="button" value="Add a new book!" class="add">
                 <dialog class="add-book-modal">
-                    <form action="" method="post" class="book-form">
+                    <button type="button" class="close-button">X</button>
+                    <form action="/book-data" method="post" class="book-form">
                         <fieldset>
                             <legend>Add Your Book</legend>
                             <label for="name">Name</label>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="book_name" id="name" required>
                             <label for="author">Author</label>
-                            <input type="text" name="author" id="author">
+                            <input type="text" name="book_author" id="author">
                             <fieldset>
                                 <legend>Read?</legend>
-                                <input type="radio" name="status" id="to-start" value="to-start">
+                                <!-- For radio buttons in the same group, we can only give 1 required, so the user
+                                 has to enter any one option -->
+                                <input type="radio" name="status" id="to-start" value="to-start" required>
                                 <label for="to-start">To Start</label>
                                 <input type="radio" name="status" id="status" value="reading">
                                 <label for="reading">Reading</label>
@@ -40,6 +43,7 @@
                                 <label for="finished">Finished</label>
                             </fieldset>
                         </fieldset>
+                        <button type="submit">Add your book!</button>
                     </form>
                 </dialog>
             </section>
