@@ -53,6 +53,7 @@ function displayLoop() {
     const bookStatus = document.createTextNode(
       `Status: ${myLibrary[i].status}`,
     );
+    let bookCover = new Image();
     bookEntry.appendChild(bookTitle);
     bookEntry.appendChild(bookAuthor);
     console.log(myLibrary[i]);
