@@ -1,5 +1,20 @@
+@font-face {
+    font-family: 'Cormorant';
+    src: url('fonts/Cormorant-Regular.woff2') format('woff2'),
+        url('fonts/Cormorant-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    font-family: 'Cormorant', sans-serif;
+}
+
 header {
     background-color: green;
+    text-align: center;
 }
 
 main {
@@ -10,6 +25,7 @@ main {
 .shelf {
     grid-column: 1 / 4;
     background-color: gray;
+    padding: 1rem;
 }
 
 .shelf-books {
@@ -20,8 +36,18 @@ main {
 .new {
     grid-column: 4 / 5;
     background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
 }
 
 .book-entry {
     color: white;
+    font-size: 1.5rem;
+}
+
+.add {
+    padding: 1rem;
+
 }
