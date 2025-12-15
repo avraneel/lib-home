@@ -1,7 +1,7 @@
 "use strict";
 
 // Dom Elements
-const button = document.querySelector(".add");
+const button = document.querySelector(".add-button");
 const addBookModal = document.querySelector(".add-book-modal");
 const bookForm = document.querySelector(".book-form");
 const closeButton = document.querySelector(".close-button");
