@@ -39,6 +39,9 @@ function addBookToLibrary(title, author, status) {
 function addSomeBooks() {
   addBookToLibrary("Frankenstein", "Mary Shelly", "Not Read");
   addBookToLibrary("The Time Machine", "H.G. Wells", "Not Read");
+  addBookToLibrary("Robinson Crusoe", "Danie Defoe", "Not Read");
+  addBookToLibrary("Nine Billion names of God", "Isaac Asimov", "Not Read");
+  addBookToLibrary("The Martian Chronicles", "Ray Bradbury", "Not Read");
 }
 
 // function to create the DOM element for a book
