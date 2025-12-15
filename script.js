@@ -23,6 +23,7 @@ closeButton.addEventListener("click", () => {
   addBookModal.close();
 });
 
+// Constructor for Book
 function Book(title, author, status) {
   this.title = title;
   this.author = author;
@@ -40,22 +41,34 @@ function addSomeBooks() {
   addBookToLibrary("The Time Machine", "H.G. Wells", "Not Read");
 }
 
+// function to create the DOM element for a book
+function createDom(book) {
+  const bookEntry = document.createElement("div");
+  bookEntry.classList.toggle("book-entry");
+  const bookTitle = document.createElement("p");
+  bookTitle.textContent = `Author: ${book.author}`;
+  const bookAuthor = document.createElement("p");
+  bookAuthor.textContent = `Author: ${book.author}`;
+  const bookStatus = document.createElement("p");
+  bookStatus.textContent = `Status: ${book.status}`;
+  const bookCover = new Image();
+  bookCover.src = `https://picsum.photos/200/300?random=1`;
+  bookCover.alt = "Frankenstein";
+
+  // Appending children
+  bookEntry.appendChild(bookCover);
+  bookEntry.appendChild(bookTitle);
+  bookEntry.appendChild(bookAuthor);
+  bookEntry.appendChild(bookStatus);
+
+  return bookEntry;
+}
+
 function displayLoop() {
   addSomeBooks();
   const shelfBooks = document.querySelector(".shelf-books");
   for (let i = 0; i < myLibrary.length; i++) {
-    let bookEntry = document.createElement("div");
-    bookEntry.classList.toggle("book-entry");
-    const bookTitle = document.createTextNode(`Title: ${myLibrary[i].title}`);
-    const bookAuthor = document.createTextNode(
-      `Author: ${myLibrary[i].author}`,
-    );
-    const bookStatus = document.createTextNode(
-      `Status: ${myLibrary[i].status}`,
-    );
-    let bookCover = new Image();
-    bookEntry.appendChild(bookTitle);
-    bookEntry.appendChild(bookAuthor);
+    const bookEntry = createDom(myLibrary[i]);
     console.log(myLibrary[i]);
     shelfBooks.appendChild(bookEntry);
   }
