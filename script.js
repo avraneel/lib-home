@@ -46,7 +46,7 @@ function createDom(book) {
   const bookEntry = document.createElement("div");
   bookEntry.classList.toggle("book-entry");
   const bookTitle = document.createElement("p");
-  bookTitle.textContent = `Author: ${book.author}`;
+  bookTitle.textContent = `Title: ${book.title}`;
   const bookAuthor = document.createElement("p");
   bookAuthor.textContent = `Author: ${book.author}`;
   const bookStatus = document.createElement("p");
