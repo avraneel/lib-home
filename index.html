@@ -8,61 +8,61 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container">
-        <header>
-            <h1>Lib-Home</h1>
-            <p>A place for all your books</p>
-        </header>
-        <main>
-            <section class="shelf">
-                <h2>Your Shelf</h2>
-                <div class="shelf-books">
-
-                </div>
-            </section>
-             <section class="new">
-                <p>Came across something new?</p>
-                <button type="button" class="add-button">Add a new book!</button>
-                <dialog class="add-book-modal">
-                    <button type="button" class="close-button">X</button>
-                    <form action="/book-data" method="post" class="book-form">
-                        <h2 class="title">Add Your Book</h2>
-                            <div class="name-field">
-                                <label for="name">Name</label>
-                                <input type="text" name="book_name" id="name" required>
+    <header>
+        <h1>Lib-Home</h1>
+        <p>A place for all your books</p>
+    </header>
+    <main>
+        <section class="shelf">
+            <h2>Your Shelf</h2>
+            <div class="shelf-books">
+            </div>
+        </section>
+        <aside class="new">
+            <p>Came across something new?</p>
+            <button type="button" class="add-button">Add a new book!</button>
+            <dialog class="add-book-modal">
+                <button type="button" class="close-button">X</button>
+                <form action="/book-data" method="post" class="book-form">
+                    <h2 class="title">Add Your Book</h2>
+                        <div class="name-field">
+                            <label for="name">Name</label>
+                            <input type="text" name="book_name" id="name" required>
+                        </div>
+                        <div class="author-field">
+                            <label for="author">Author</label>
+                            <input type="text" name="book_author" id="author">
+                        </div>
+                        <fieldset class="status-radio">
+                            <div>
+                            <legend>Read?</legend>
                             </div>
-                            <div class="author-field">
-                                <label for="author">Author</label>
-                                <input type="text" name="book_author" id="author">
+                            <!-- For radio buttons in the same group, we can only give 1 required, so the user
+                                has to enter any one option -->
+                            <div>
+                                <input type="radio" name="status" id="to-start" value="to-start" required>
+                                <label for="to-start">To Start</label>
                             </div>
-                            <fieldset class="status-radio">
-                                <div>
-                                <legend>Read?</legend>
-                                </div>
-                                <!-- For radio buttons in the same group, we can only give 1 required, so the user
-                                 has to enter any one option -->
-                                <div>
-                                    <input type="radio" name="status" id="to-start" value="to-start" required>
-                                    <label for="to-start">To Start</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="status" id="status" value="reading">
-                                    <label for="reading">Reading</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="status" id="on-hold" value="on-hold">
-                                    <label for="on-hold">On Hold</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="status" id="finished" value="finished">
-                                    <label for="finished">Finished</label>
-                                </div>
-                            </fieldset>
-                        <button type="submit">Add your book!</button>
-                    </form>
-                </dialog>
-            </section>
-        </main>
-    </div>
+                            <div>
+                                <input type="radio" name="status" id="status" value="reading">
+                                <label for="reading">Reading</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="status" id="on-hold" value="on-hold">
+                                <label for="on-hold">On Hold</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="status" id="finished" value="finished">
+                                <label for="finished">Finished</label>
+                            </div>
+                        </fieldset>
+                    <button type="submit">Add your book!</button>
+                </form>
+            </dialog>
+        </aside>
+    </main>
+    <footer>
+        <p>Thanks for visiting!</p>
+    </footer>
   </body>
 </html>

@@ -1,5 +1,5 @@
-* {
-    margin: 0;
+body {
+    margin: 0px;
 }
 
 fieldset {
@@ -8,33 +8,31 @@ fieldset {
     padding: 0;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Cormorant';
     src: url('fonts/Cormorant-Regular.woff2') format('woff2'),
         url('fonts/Cormorant-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-
-body {
-    font-family: 'Cormorant', sans-serif;
-}
+} */
 
 header {
     text-align: center;
-    border: 1px solid black;
+    background-color: hsl(0, 0%, 76%);
+    /* the margin between h1 and header stops collapsing when we give padding */
+    padding: 15px;
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200fr, 1fr));
+footer {
+    text-align: center;
+    background-color: hsl(0, 0%, 61%);
+    padding: 5px;
 }
 
 .shelf {
-    grid-column: 1 / 4;
-    padding: 1rem;
-    border: 1px double black;
+    padding: 25px;
+    background-color: hsl(39, 31%, 63%);
 }
 
 .shelf-books {
@@ -45,9 +43,8 @@ main {
 }
 
 .new {
-    grid-column: 4 / 5;
-    height: min-content;
-    border: 1px solid black;
+    background-color: hsl(56, 98%, 81%);
+    padding: 25px;
 }
 
 .book-entry {
