@@ -30,7 +30,13 @@ footer {
     padding: 5px;
 }
 
+main {
+    display: flex;
+}
+
 .shelf {
+    flex-basis: auto;
+    flex-grow: 4;
     padding: 25px;
     background-color: hsl(39, 31%, 63%);
 }
@@ -38,11 +44,13 @@ footer {
 .shelf-books {
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
 }
 
 .new {
+    flex-basis: auto;
+    flex-grow: 1;
     background-color: hsl(56, 98%, 81%);
     padding: 25px;
 }
